@@ -1,4 +1,4 @@
-# Redis 4.0-rc2
+# Redis 4.0-rc3
 
 FROM alpine:3.5
 MAINTAINER Adrian B. Danieli "https://github.com/sickp"
@@ -15,9 +15,9 @@ RUN build_packages="build-base linux-headers openssl" \
   && wget -O /usr/local/bin/gosu https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64 \
   && chmod +x /usr/local/bin/gosu \
   && cd /tmp \
-  && wget https://github.com/antirez/redis/archive/4.0-rc2.tar.gz \
-  && tar xzf 4.0-rc2.tar.gz \
-  && cd /tmp/redis-4.0-rc2 \
+  && wget https://github.com/antirez/redis/archive/4.0-rc3.tar.gz \
+  && tar xzf 4.0-rc3.tar.gz \
+  && cd /tmp/redis-4.0-rc3 \
   && make \
   && make install \
   && cp redis.conf /etc/redis.conf \
